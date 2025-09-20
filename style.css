@@ -1,0 +1,123 @@
+/* Background */
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  overflow: hidden;
+  text-align: center;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Welcome Screen */
+#welcome-screen {
+  background: rgba(255,255,255,0.2);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+#welcome-screen input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  width: 220px;
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+#welcome-screen button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#welcome-screen button:hover {
+  background: #ffe066;
+}
+
+/* Cake Bounce */
+.cake {
+  font-size: 5rem;
+  margin: 20px 0;
+  animation: bounce 1.2s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-15px); }
+}
+
+/* Confetti */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  top: -10px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+/* Photo Upload */
+#photoInput, #musicInput {
+  margin: 15px;
+  font-size: 1rem;
+}
+
+.photo-frame {
+  display: none;
+  border: 5px solid #fff;
+  border-radius: 15px;
+  padding: 10px;
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  margin: 15px 0;
+}
+
+#photoPreview {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 12px;
+}
+
+/* Hide music player completely */
+#musicPlayer {
+  display: none;
+}
+
+/* Stop Music Button */
+#stopMusicBtn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #ff4d6d;
+  color: white;
+  margin-top: 15px;
+  cursor: pointer;
+  display: none;
+}
+
+#stopMusicBtn:hover {
+  background: #cc0033;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Surprise 🎉</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Step 1: Welcome -->
+  <div id="welcome-screen">
+    <h2>Enter Your Name 🎂</h2>
+    <input type="text" id="nameInput" placeholder="Your Name">
+    <button onclick="startSurprise()">Start Surprise 🎉</button>
+  </div>
+
+  <!-- Step 2: Surprise (hidden at first) -->
+  <div id="surprise-screen" style="display:none;">
+    <h1 id="birthdayMessage">🎉 Happy Birthday! 🎉</h1>
+    <p>Wishing you lots of happiness, success, and joy! 🥳</p>
+
+    <!-- Cake -->
+    <div class="cake">🎂</div>
+
+    <!-- Photo upload -->
+    <p>Upload a photo:</p>
+    <input type="file" id="photoInput" accept="image/*">
+    <div class="photo-frame">
+      <img id="photoPreview" alt="Your chosen photo">
+    </div>
+
+    <!-- Music upload -->
+    <p>🎶 Choose your own music file (MP3/WAV/MP4):</p>
+    <input type="file" id="musicInput">
+
+    <!-- Hidden music player -->
+    <audio id="musicPlayer" autoplay></audio>
+
+    <!-- Stop Music Button -->
+    <button id="stopMusicBtn" style="display:none;">⏸ Stop Music</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
